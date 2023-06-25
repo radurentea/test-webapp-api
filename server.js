@@ -11,7 +11,8 @@ const app = express()
 
 // cors
 app.use(cors({
-  origin: 'https://chipper-snickerdoodle-801550.netlify.app'
+  origin: 'https://chipper-snickerdoodle-801550.netlify.app',
+  credentials: true
 }))
 
 // middleware
