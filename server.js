@@ -1,12 +1,18 @@
 require('dotenv').config()
 
 const express = require('express')
+const cors = require('cors')
 const mongoose = require('mongoose')
 const workoutRoutes = require('./routes/workouts')
 const userRoutes = require('./routes/user')
 
 // express app
 const app = express()
+
+// cors
+app.use(cors({
+  origin: 'https://chipper-snickerdoodle-801550.netlify.app'
+}))
 
 // middleware
 app.use(express.json())
